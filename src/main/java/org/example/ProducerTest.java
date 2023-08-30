@@ -21,7 +21,7 @@ public class ProducerTest {
         // KafkaProducer 인스턴스를 생성합니다.
         KafkaProducer<String, String> producer = new KafkaProducer<>(properties);
         // ProducerRecord를 생성하여 메시지를 보냅니다.
-        ProducerRecord<String, String> record = new ProducerRecord<>("Org", "A1", '{Val:"123"}');
+        ProducerRecord<String, String> record = new ProducerRecord<>("Org", "A1", "{Val:3}");
 
         // 메시지를 전송합니다.
         producer.send(record);
